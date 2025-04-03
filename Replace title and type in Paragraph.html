@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title and Type Replacer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Replace "(title)" and "(type)" in Paragraph</h1>
+
+<!-- Input fields for replacement texts -->
+<label for="inputTitle">Enter the replacement for "(title)":</label>
+<br>
+<input type="text" id="inputTitle" placeholder="Enter title replacement text here">
+<br>
+<label for="inputType">Enter the replacement for "(type)":</label>
+<br>
+<input type="text" id="inputType" placeholder="Enter type replacement text here">
+
+<!-- Button to perform replacements and copy -->
+<button onclick="replaceAndCopy()">Replace and Copy</button>
+
+<!-- Output area where modified content will be shown -->
+<div class="output" id="outputText">
+    
+    
+    
+    
+    <h1>(title) CapCut Templates</h1>
+
+<h2>What are (title) CapCut Templates?</h2>
+
+
+
+
+<h2>(title) CapCut Templates Types</h2>
+
+
+<h3>Trending (title) CapCut Templates</h3>
+
+<h3>Popular (title) CapCut Templates</h3>
+
+<h3>Beat (title) CapCut Templates</h3>
+
+<h3>Velocity Effect (title) CapCut Templates</h3>
+
+<h3>Lyrics (title) CapCut Templates</h3>
+
+<h3>Aesthetic (title) CapCut Templates</h3>
+
+
+
+
+
+<h2>Top 10 (title) CapCut Templates</h2>
+
+<h2>Use Best (title) CapCut Templates for TikTok and Instagram</h2>
+
+<h2>Why (title) CapCut Templates are Trending?</h2>
+
+<h2>Create Viral Videos with (title) CapCut Templates</h2>
+
+<h2>Best (title) CapCut Templates for (type)</h2>
+
+<h2>(title) Music Recommendations for Your CapCut Videos</h2>
+
+<h2>(title) CapCut Templates for YouTube Shorts and Reels</h2>
+
+
+
+<h2>Frequently Asked Questions (FAQs) about (title) CapCut Templates</h2>
+
+
+<h3>"How do I edit a (title) video with CapCut?"</h3>
+
+<h3>"Where can I find the best (title) CapCut templates?"</h3>
+
+<h3>"How do I add (title) effects to my CapCut videos?"</h3>
+
+
+
+
+<h2>User Reviews: The Most Popular (title) CapCut Templates</h2>
+
+<h2>Tips to Use (title) CapCut Templates</h2>
+
+<h2>{How to use}</h2>
+
+<h2>Pros & Cons of (title) CapCut Templates</h2>
+
+<h2>Final Conclusion of (title) CapCut Templates</h2>
+
+
+    
+    
+    
+    
+    
+</div>
+
+<!-- Hidden textarea for copying content -->
+<textarea id="hiddenTextarea" style="opacity: 0; height: 0;"></textarea>
+
+<script>
+    function replaceAndCopy() {
+        // Get the replacement texts from inputs
+        const inputTitle = document.getElementById("inputTitle").value;
+        const inputType = document.getElementById("inputType").value;
+
+        // Get the original content
+        const originalContent = document.getElementById("outputText").innerHTML;
+
+        // Replace all occurrences of "(title)" and "(type)"
+        const replacedContent = originalContent
+            .replace(/\(title\)/gi, inputTitle)
+            .replace(/\(type\)/gi, inputType);
+
+        // Update the output area with the replaced content
+        document.getElementById("outputText").innerHTML = replacedContent;
+
+        // Copy the replaced content to the hidden textarea for copying
+        const textarea = document.getElementById("hiddenTextarea");
+        textarea.value = replacedContent;
+        textarea.select();
+        document.execCommand("copy");
+
+        // Alert user about successful copy
+        alert("Replaced content has been copied to clipboard!");
+    }
+</script>
+
+</body>
+</html>
